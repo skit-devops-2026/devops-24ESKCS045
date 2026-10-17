@@ -1,0 +1,11 @@
+
+services:
+  news-portal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: news-portal:latest
+    container_name: news-portal-compose
+    ports:
+      - "8082:80"
+    restart: unless-stopped

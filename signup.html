@@ -14,6 +14,7 @@
         <p class="auth-card-tagline">Sign up to read premium verified news</p>
     </div>
 
+    <form onsubmit="event.preventDefault(); signup();" autocomplete="on">
     <div class="auth-form-group">
         <label for="signupName" class="auth-label">Full Name</label>
         <input type="text" id="signupName" class="auth-input-field" placeholder="John Doe" required autocomplete="name">
@@ -33,7 +34,8 @@
         <span id="strengthText" style="font-size: 0.75rem; color: var(--text-muted);"></span>
     </div>
 
-    <button onclick="signup()" class="btn-auth-action">Sign Up</button>
+    <button type="submit" class="btn-auth-action">Sign Up</button>
+    </form>
 
     <p class="auth-footer-redirect">Already have an account? <a href="login.html">Login</a></p>
 </div>

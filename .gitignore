@@ -1,0 +1,32 @@
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+*.lnk
+.vscode/
+.idea/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Dependencies and build outputs
+node_modules/
+dist/
+build/
+coverage/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local test and tool artifacts
+.pytest_cache/

@@ -1,0 +1,35 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: news-portal
+  labels:
+    app: news-portal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: news-portal
+  template:
+    metadata:
+      labels:
+        app: news-portal
+    spec:
+      containers:
+        - name: news-portal
+          image: ghcr.io/karnikaney-cmd/news-portal:v3
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 20

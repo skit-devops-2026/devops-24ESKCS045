@@ -20,6 +20,7 @@
     </div>
 
     <!-- Mock Card Details Form for Premium Aesthetics -->
+    <form onsubmit="event.preventDefault(); makePayment();">
     <div class="auth-form-group">
         <label for="cardNumber" class="auth-label">Card Number</label>
         <input type="text" id="cardNumber" class="auth-input-field" placeholder="1234 5678 1234 5678" maxlength="19" required>
@@ -36,7 +37,8 @@
         </div>
     </div>
 
-    <button onclick="makePayment()" class="btn-auth-action">Pay & Subscribe</button>
+    <button type="submit" class="btn-auth-action">Pay &amp; Subscribe</button>
+    </form>
 
     <p class="auth-footer-redirect"><a href="index.html" style="color: var(--text-secondary); text-decoration: underline;">Cancel and return to home</a></p>
 </div>
