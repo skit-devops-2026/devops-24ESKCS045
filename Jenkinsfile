@@ -11,7 +11,7 @@ pipeline {
 
         stage('Install') {
             steps {
-                bat 'make install'
+                bat 'echo No external dependencies required'
             }
         }
 
